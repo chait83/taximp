@@ -1,0 +1,22 @@
+doctype html
+head
+  title Convert file
+  script(type='text/javascript' src='bootstrap/js/bootstrap.min.js')
+  link(href='bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  link(href='css/font.css' rel='stylesheet')
+  link(href='https://fonts.googleapis.com/css?family=Muli:300,400,700' rel='stylesheet')
+  link(href='css/style.default.css' rel='stylesheet')
+#container.col
+  .row(style='margin-top: 100px;')
+    .col-lg-3
+    .col-lg-9
+      form#uploadForm(ref='uploadForm', action='Convert.html', method='post', enctype='multipart/form-data')
+        h2=msg
+        input#testFile(type='file' name='testFile')
+        p
+          input(type='radio' name='rdType' value='0')
+          | Master 
+          input(type='radio' name='rdType' value='1')
+          | Ledger
+        p
+          input(type='submit' value='Upload')
